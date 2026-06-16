@@ -1,0 +1,107 @@
+/* --- СБРОС И ГЛОБАЛЬНЫЕ СТИЛИ --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    background-color: black; /* ЧЕРНЫЙ ФОН ДЛЯ ВСЕГО САЙТА */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* --- НАЗВАНИЕ САЙТА --- */
+.site-header {
+    background-color: #1e1e1e; /* Темная плашка для заголовка */
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+.site-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #00d4ff; /* Яркий цвет */
+}
+
+/* --- ОСНОВНОЙ КОНТЕЙНЕР (ДЕЛИМ ЭКРАН) --- */
+.main-container {
+    display: flex;
+    height: calc(100vh - 60px); /* Высота экрана минус высота заголовка */
+}
+
+/* --- БОКОВАЯ ПАНЕЛЬ (СЛЕВА) --- */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    padding: 20px;
+}
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+.playlist {
+    list-style: none;
+}
+.playlist li {
+    color: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.playlist li:hover {
+    background-color: #333;
+}
+
+/* --- ПОЛНОЭКРАННЫЙ ПЛЕЕР (НАЧАЛЬНОЕ СОСТОЯНИЕ) --- */
+#fullscreen-player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: black; /* ЧЕРНЫЙ ФОН ПЛЕЕРА */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0; /* СКРЫТ */
+    visibility: hidden;
+    
+    z-index: 1000; /* Всегда поверх всего */
+}
+#fullscreen-player.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- СТИЛИ ВНУТРИ ПЛЕЕРА --- */
+.player-content {
+    text-align: center;
+    color: white;
+}
+#big-cover {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.info h2 {
+    margin: 20px 0 10px;
+}
+#big-artist {
+    color: #aaa;
+}
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

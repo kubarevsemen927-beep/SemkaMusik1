@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SemkaМузыка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- НАЗВАНИЕ САЙТА -->
+    <header class="site-header">
+        <h1>SemkaМузыка</h1>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
+    <div class="main-container">
+
+        <!-- БОКОВАЯ ПАНЕЛЬ С ТРЕКОВ (СЛЕВА) -->
+        <aside class="sidebar">
+            <h2>Плейлист</h2>
+            <ul id="playlist" class="playlist">
+                <li data-src="Snalird.mp3" data-title="Трек 1: Сняли род контроль" data-artist="Исполнитель Semka1000 $ Matvey" data-cover="covers/cover1.jpg">Трек 1: Летний бриз</li>
+                <li data-src="Semka.mp3" data-title="Трек 2: фонк в машину" data-artist="Исполнитель Semka1000" data-cover="covers/cover2.jpg">Трек 2: Ночная прогулка</li>
+                <li data-src="beta.mp3" data-title="Трек 3: Фонк в машину beta" data-artist="Исполнитель Semka1000" data-cover="covers/cover3.jpg">Трек 3: Утреннее солнце</li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- ПОЛНОЭКРАННЫЙ ПЛЕЕР (СКРЫТ) -->
+    <div id="fullscreen-player" class="hidden">
+        <div class="player-content">
+            <button id="close-player" class="close-btn">✖</button>
+            <img id="big-cover" src="" alt="Обложка альбома">
+            <div class="info">
+                <h2 id="big-title">Название трека</h2>
+                <p id="big-artist">Исполнитель</p>
+            </div>
+            <audio id="audio-player" controls></audio>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
